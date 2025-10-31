@@ -1,7 +1,7 @@
 import prompt
 
-def game_base(task, get_data, total_rounds=3):
 
+def game_base(task, get_data, total_rounds=3):
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
@@ -16,9 +16,11 @@ def game_base(task, get_data, total_rounds=3):
         if user_answer == str(answer):
             print("Correct!")
         else:
-            print(f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was '{answer}'.")
+            print(
+                f"'{user_answer}' is wrong answer ;(. "
+                f"Correct answer was '{answer}'."
+            )
             print(f"Let's try again, {name}!")
             return
 
-    print(f'Congratulations, {name}!')
+    print(f"Congratulations, {name}!")

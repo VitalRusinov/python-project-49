@@ -1,13 +1,14 @@
-from ..utils.generate_random_number import generate_random_number
 from ..utils.game_base import game_base
+from ..utils.generate_random_number import generate_random_number
 
 OPERATIONS = [
-    ('+', lambda a, b: a + b),
-    ('-', lambda a, b: a - b),
-    ('*', lambda a, b: a * b)
+    ("+", lambda a, b: a + b),
+    ("-", lambda a, b: a - b),
+    ("*", lambda a, b: a * b),
 ]
 
 OPERATOR_INDEX_RANGE = (0, len(OPERATIONS) - 1)
+
 
 def get_calc_data():
     num1 = generate_random_number()
@@ -15,14 +16,16 @@ def get_calc_data():
     operator_index = generate_random_number(*OPERATOR_INDEX_RANGE)
     operator, operation = OPERATIONS[operator_index]
 
-    question = f'{num1} {operator} {num2}'
+    question = f"{num1} {operator} {num2}"
     answer = operation(num1, num2)
 
     return question, answer
 
+
 def brain_calc():
-    task = 'What is the result of the expression?'
+    task = "What is the result of the expression?"
     game_base(task, get_calc_data)
+
 
 if __name__ == "__main__":
     brain_calc()

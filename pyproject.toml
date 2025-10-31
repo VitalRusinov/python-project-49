@@ -4,7 +4,7 @@ authors = [
 ]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Add your description here"
+description = "A set of five console games"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
