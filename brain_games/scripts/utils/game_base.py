@@ -1,6 +1,6 @@
 import prompt
 
-def gameBase(task, getData):
+def game_base(task, getData):
     total_rounds = 3
     current_round = 1
 

@@ -1,5 +1,5 @@
 from ..utils.generate_random_number import generate_random_number
-from ..utils.gameBase import gameBase
+from ..utils.game_base import game_base
 
 OPERATIONS = [
     ('+', lambda a, b: a + b),
@@ -22,7 +22,7 @@ def get_calc_data():
 
 def brain_calc():
     task = 'What is the result of the expression?'
-    gameBase(task, get_calc_data)
+    game_base(task, get_calc_data)
 
 if __name__ == "__main__":
     brain_calc()
