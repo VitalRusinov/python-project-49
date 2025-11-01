@@ -1,10 +1,18 @@
 from ..utils.game_base import game_base
 from ..utils.generate_random_number import generate_random_number
-from ..utils.get_progression import get_progression
 
 MIN_PROGRESSION_LENGTH = 5
 MAX_PROGRESSION_LENGTH = 10
 MIN_INDEX = 0
+MIN_STEP, MAX_STEP = 1, 10
+
+
+def get_progression(min_length, max_length):
+    length = generate_random_number(min_length, max_length)
+    start = generate_random_number()
+    step = generate_random_number(MIN_STEP, MAX_STEP)
+
+    return [str(start + i * step) for i in range(length)]
 
 
 def get_progression_data():

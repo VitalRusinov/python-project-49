@@ -1,6 +1,9 @@
 from ..utils.game_base import game_base
 from ..utils.generate_random_number import generate_random_number
-from ..utils.is_even import is_even
+
+
+def is_even(num):
+    return True if num % 2 == 0 else False
 
 
 def get_even_data():

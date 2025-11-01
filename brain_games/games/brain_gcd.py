@@ -1,6 +1,11 @@
 from ..utils.game_base import game_base
 from ..utils.generate_random_number import generate_random_number
-from ..utils.get_gcd import get_gcd
+
+
+def get_gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return abs(a)
 
 
 def get_gcd_data():
